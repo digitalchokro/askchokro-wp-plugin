@@ -1,0 +1,17 @@
+{
+  "name": "askchokro-wp-plugin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start",
+    "zip": "npm run build && composer install --no-dev && rm -f askchokro-wp-plugin.zip && zip -r askchokro-wp-plugin.zip askchokro.php includes build vendor readme.txt"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@wordpress/scripts": "^32.6.0"
+  }
+}
