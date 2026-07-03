@@ -6,7 +6,8 @@
   "scripts": {
     "build": "wp-scripts build",
     "start": "wp-scripts start",
-    "zip": "npm run build && composer install --no-dev && rm -f askchokro-wp-plugin.zip && zip -r askchokro-wp-plugin.zip askchokro.php includes build vendor readme.txt"
+    "lint": "wp-scripts lint-js",
+    "zip": "zip -r askchokro-wp-plugin.zip . -x 'node_modules/*' -x 'src/*' -x '.git/*' -x 'package-lock.json' -x 'package.json' -x 'webpack.config.js' -x '*.zip'"
   },
   "keywords": [],
   "author": "",
