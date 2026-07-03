@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from '@wordpress/element';
 import domReady from '@wordpress/dom-ready';
 import { createRoot } from '@wordpress/element';
+import { ChartRenderer } from './ChartRenderer';
 
 import './index.scss';
 
@@ -53,6 +54,8 @@ function AskChokroChat() {
             setMessages(prev => [...prev, { 
                 type: 'ai', 
                 text: data.answer || 'No answer provided.',
+                chart: data.chart,
+                rows: data.rows,
                 sql: data.sql
             }]);
         } catch (error) {
@@ -83,6 +86,9 @@ function AskChokroChat() {
                 {messages.map((msg, idx) => (
                     <div key={idx} className={`askchokro-message ${msg.type}`}>
                         {msg.text}
+                        {msg.chart && msg.rows && (
+                            <ChartRenderer chart={msg.chart} rows={msg.rows} />
+                        )}
                         {msg.sql && (
                             <pre style={{ fontSize: '11px', marginTop: '8px', opacity: 0.8, overflowX: 'auto' }}>
                                 {msg.sql}
