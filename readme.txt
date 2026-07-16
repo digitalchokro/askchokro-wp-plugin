@@ -6,11 +6,11 @@ Tested up to: 6.4
 Stable tag: 1.0.0
 License: MIT
 
-Zero-code AI integration for WordPress using the AskChokro Microservice.
+Zero-code AI integration for WordPress using the AskChokro Microservice. Engineered for high performance and scale.
 
 == Description ==
 
-AskChokro allows you to embed a powerful Natural Language to SQL AI assistant directly into your WordPress site.
+AskChokro allows you to embed a powerful Natural Language to SQL AI assistant directly into your WordPress site. This premium integration turns your WordPress database into an interactive analytics engine without writing a single line of code.
 
 Note: This plugin requires you to run the AskChokro Microservice (Docker) connected to your WordPress database.
 
