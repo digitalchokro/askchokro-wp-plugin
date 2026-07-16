@@ -1,21 +1,20 @@
 {
-  "name": "askchokro-wp-plugin",
+  "name": "@digitalchokro/wordpress-plugin",
   "version": "1.0.0",
-  "description": "",
+  "description": "AskChokro WordPress Plugin",
   "main": "index.js",
   "scripts": {
     "build": "wp-scripts build",
-    "start": "wp-scripts start",
-    "lint": "wp-scripts lint-js",
-    "zip": "zip -r askchokro-wp-plugin.zip . -x 'node_modules/*' -x 'src/*' -x '.git/*' -x 'package-lock.json' -x 'package.json' -x 'webpack.config.js' -x '*.zip'"
+    "format": "wp-scripts format",
+    "lint:css": "wp-scripts lint-style",
+    "lint:js": "wp-scripts lint-js",
+    "packages-update": "wp-scripts packages-update",
+    "plugin-zip": "wp-scripts plugin-zip",
+    "start": "wp-scripts start"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "@wordpress/scripts": "^32.6.0"
+    "@wordpress/scripts": "^27.9.0"
   },
-  "dependencies": {
-    "recharts": "^3.9.1"
-  }
+  "author": "AskChokro Team",
+  "license": "MIT"
 }
