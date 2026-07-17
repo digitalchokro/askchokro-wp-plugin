@@ -31,6 +31,22 @@ AskChokro allows you to embed a powerful Natural Language to SQL AI assistant di
 - **Enterprise Security:** Secured via JWT authentication to ensure only authorized frontend components can query the database.
 - **Modern Chat UI:** A sleek, reactive frontend built directly into the WordPress ecosystem.
 
+```mermaid
+sequenceDiagram
+    participant Browser
+    participant WP as WordPress Server
+    participant MS as AskChokro Microservice
+    participant DB as SQL Database
+    
+    Browser->>WP: User Types Question
+    WP->>WP: Validate JWT & Nonce
+    WP->>MS: Forward Question + Credentials
+    MS->>DB: Execute AI-Generated SQL
+    DB-->>MS: Return Rows
+    MS-->>WP: Return Formatted Answer & Chart
+    WP-->>Browser: Render Answer to User
+```
+
 <br/>
 <p align="center">
   <picture>
